@@ -2,9 +2,6 @@ import json
 from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
-CREDENTIALS_PATH = '/Users/dylanb/codebase/recipe-grabber/credentials/luna-love-more-ed680a0f7565.json'
-GOOGLE_DRIVE_FOLDER_ID='1xW8PjYM29Shd9lMb6jpTKe-1gMJqSF3r'
-
 class GoogleDriveClient:
     def __init__(self, credentials_path: str):
         self.credentials_path = credentials_path
