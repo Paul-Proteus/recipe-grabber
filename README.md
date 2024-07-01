@@ -1,2 +1,2 @@
 # recipe-grabber
-This application takes images of recipes and turns them into a database of recipes.
+This application gets images of recipes from my Google Drive, uses OpenAi's API to extract the details of the recipes, and then stores them into a database.
