@@ -3,6 +3,7 @@ from google.oauth2 import service_account
 from googleapiclient.discovery import build
 
 CREDENTIALS_PATH = '/Users/dylanb/codebase/recipe-grabber/credentials/luna-love-more-ed680a0f7565.json'
+GOOGLE_DRIVE_FOLDER_ID='1xW8PjYM29Shd9lMb6jpTKe-1gMJqSF3r'
 
 class GoogleDriveClient:
     def __init__(self, credentials_path: str):
@@ -21,10 +22,3 @@ class GoogleDriveClient:
     def list_files(self, query: str):
         return self.client.files().list(q=query).execute()
     
-if __name__ == "__main__":
-    try:
-        googleDriveClient = GoogleDriveClient(credentials_path=CREDENTIALS_PATH)
-        response = googleDriveClient.list_files(query="mimeType='image/jpeg'")
-        print(response)
-    except Exception as e:
-        print(e)
